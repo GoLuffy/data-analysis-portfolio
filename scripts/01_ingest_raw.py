@@ -13,7 +13,7 @@ def get_db_engine():
     port = os.getenv('DB_PORT', '5432')
     dbname = os.getenv('DB_NAME', 'bi_project')
     user = os.getenv('DB_USER', 'biadmin')
-    password = os.getenv('DB_PASSWORD', 'Bi_2026#PgSql!')
+    password = os.getenv('DB_PASSWORD', '')
 
     conn_str = f"postgresql://{user}:{password}@{host}:{port}/{dbname}"
     return create_engine(conn_str)
